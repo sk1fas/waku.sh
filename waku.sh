@@ -109,7 +109,7 @@ curl -s https://raw.githubusercontent.com/sk1fas/logo-sk1fas/main/logo-sk1fas.sh
             echo -e "${BLUE}Обновление ноды Waku...${NC}"
             cd $HOME/nwaku-compose
             docker-compose down
-            sudo rm -r keystore rln_tree
+            sudo rm -fr rln_tree keystore
             git pull origin master
             ./register_rln.sh
             docker-compose up -d
